@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="form">
+        <form action="">
+            <h1 class="title">Nacionalidade</h1>
+
+            <label for="username">Seu País:</label>
+            <div class="input">
+                <input type="text" name="txtnome" id="txtnome" placeholder="País">  
+            </div>
+
+            <label for="username">Mora em:</label>
+            <div class="input">
+                <input type="text" name="txtmora" id="txtmora" placeholder="País">
+            </div>
+            <div id="btn">
+                <input type="button" value="Verificar" onclick="verificar()">
+            </div>
+           
+        </form>
+            <div id="pais">
+    </div>    
+    <script>
+        function verificar(){
+            var txtnome = window.document.querySelector('input#txtnome')
+            var res = window.document.querySelector('div#pais')
+            var pais = (txtnome.value)
+            var mora = (txtmora.value)
+            res.innerHTML = `<p>Seu País é:  <strong>${pais}</strong></p>`
+            
+                if( pais == 'Brasil'){
+                    res.innerHTML += `<p>Você é <strong>Brasileiro!</strong></p>`
+                }else{
+                    res.innerHTML += `<p>Você é <strong>Estrangeiro!</strong></p>`
+                }if( mora == mora){
+                    res.innerHTML += `<p>Vivendo em <strong>${mora}</strong></p>`
+                    
+                }
+                              
+        }
+    </script>
+</body>
+</html>
